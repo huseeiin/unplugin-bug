@@ -4,5 +4,5 @@ const { GET: doesNotWork }: typeof import(".") = await import(
 );
 
 setInterval(async () => {
-  document.body.innerHTML = await doesNotWork().text();
+  document.body.innerHTML = await works().text();
 }, 250);
